@@ -21,5 +21,3 @@ Example usage: `python main.py --alg vlsac --env HalfCheetah-v3`.
 
 [2] [Zhang, Tianjun, Tongzheng Ren, Mengjiao Yang, Joseph Gonzalez, Dale Schuurmans, and Bo Dai. "Making linear mdps practical via contrastive representation learning." In International Conference on Machine Learning, pp. 26447-26466. PMLR, 2022.](https://arxiv.org/abs/2207.07150)
 
-## Spectral Representation for Causal Inference
-*The code will be available soon.*
