@@ -1,6 +1,8 @@
 # Overview
 This repo is dedicated to exploring the field of Representation Learning (RepL) with a specific focus on Reinforcement Learning (RL) and Causal Inference. Our goal is to build a comprehensive resource that integrates our latest research and practical implementations.
 
+[Website] [RL-REP: Representation-based Reinforcement Learning](https://haotiansun14.github.io/rl-rep-page/)
+
 ## Representation-based Reinforcement Learning
 This repo contains implementations for RL with:
 - Latent Variable Representations (LV), as outlined in [1].
