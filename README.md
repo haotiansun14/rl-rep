@@ -21,3 +21,24 @@ Example usage: `python main.py --alg vlsac --env HalfCheetah-v3`.
 
 [2] [Zhang, Tianjun, Tongzheng Ren, Mengjiao Yang, Joseph Gonzalez, Dale Schuurmans, and Bo Dai. "Making linear mdps practical via contrastive representation learning." In International Conference on Machine Learning, pp. 26447-26466. PMLR, 2022.](https://arxiv.org/abs/2207.07150)
 
+If you find our work helpful, please consider citing our paper:
+```
+@misc{ren2023latent,
+      title={Latent Variable Representation for Reinforcement Learning}, 
+      author={Tongzheng Ren and Chenjun Xiao and Tianjun Zhang and Na Li and Zhaoran Wang and Sujay Sanghavi and Dale Schuurmans and Bo Dai},
+      year={2023},
+      eprint={2212.08765},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
+```
+@misc{zhang2022making,
+      title={Making Linear MDPs Practical via Contrastive Representation Learning}, 
+      author={Tianjun Zhang and Tongzheng Ren and Mengjiao Yang and Joseph E. Gonzalez and Dale Schuurmans and Bo Dai},
+      year={2022},
+      eprint={2207.07150},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
