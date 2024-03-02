@@ -17,7 +17,7 @@ if __name__ == "__main__":
 	
   parser = argparse.ArgumentParser()
   parser.add_argument("--dir", default=0, type=int)                     
-  parser.add_argument("--alg", default="ctrlsac")                     # Alg name (sac, vlsac, spedersac, ctrlsac)
+  parser.add_argument("--alg", default="ctrlsac")                     # Alg name (sac, vlsac, spedersac, ctrlsac, mulvdrq)
   parser.add_argument("--env", default="HalfCheetah-v3")          # Environment name
   parser.add_argument("--seed", default=0, type=int)              # Sets Gym, PyTorch and Numpy seeds
   parser.add_argument("--start_timesteps", default=25e3, type=float)# Time steps initial random policy is used
@@ -33,6 +33,18 @@ if __name__ == "__main__":
   parser.add_argument("--save_model", action="store_true")        # Save model and optimizer parameters
   parser.add_argument("--extra_feature_steps", default=3, type=int)
   args = parser.parse_args()
+
+  if args.alg == 'mulvdrq':
+    import sys
+    sys.path.append('agent/mulvdrq/')
+    from agent.mulvdrq.train_metaworld import Workspace, cfg
+    cfg.task_name = args.env
+    cfg.seed = args.seed
+    workspace = Workspace(cfg)
+    workspace.cfg.task_name = args.env
+    workspace.train()
+
+    sys.exit()
 
   env = gym.make(args.env)
   eval_env = gym.make(args.env)
