@@ -41,7 +41,6 @@ if __name__ == "__main__":
     cfg.task_name = args.env
     cfg.seed = args.seed
     workspace = Workspace(cfg)
-    workspace.cfg.task_name = args.env
     workspace.train()
 
     sys.exit()
