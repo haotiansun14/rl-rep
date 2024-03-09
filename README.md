@@ -7,7 +7,7 @@ This repo is dedicated to exploring the field of Representation Learning (RepL) 
 This repo contains implementations for RL with:
 - Latent Variable Representations (LV), as outlined in [1].
 - Contrastive Representations (CTRL), as described in [2].
-- Multi-step Latent Variable Representation $\mu$LV-Rep, as outlined in [3].
+- Multi-step Latent Variable Representation $\mu \textit{LV-Rep}$, as outlined in [3].
 
 ### Directory
 - `agent` hosts implementation files for various agents, including the Soft Actor-Critic baseline (`sac`), SAC with Latent Variable (`vlsac`), SAC with Contrastive Representations (`ctrlsac`), and DrQv2 with Multi-step Latent Variable Representation (`mulvdrq`).
