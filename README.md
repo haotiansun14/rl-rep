@@ -7,7 +7,7 @@ This repo is dedicated to exploring the field of Representation Learning (RepL) 
 This repo contains implementations for RL with:
 - Latent Variable Representations (LV), as outlined in [1].
 - Contrastive Representations (CTRL), as described in [2].
-- Multi-step Latent Variable Representation $\mu \textit{LV-Rep}$, as outlined in [3].
+- Multi-step Latent Variable Representation $\mu \textit{LV-Rep}$, as described in [3].
 
 ### Directory
 - `agent` hosts implementation files for various agents, including the Soft Actor-Critic baseline (`sac`), SAC with Latent Variable (`vlsac`), SAC with Contrastive Representations (`ctrlsac`), and DrQv2 with Multi-step Latent Variable Representation (`mulvdrq`).
@@ -24,7 +24,7 @@ Example usage: `python main.py --alg vlsac --env HalfCheetah-v3`.
 
 [2] [Zhang, Tianjun, Tongzheng Ren, Mengjiao Yang, Joseph Gonzalez, Dale Schuurmans, and Bo Dai. "Making linear mdps practical via contrastive representation learning." In International Conference on Machine Learning, pp. 26447-26466. PMLR, 2022.](https://arxiv.org/abs/2207.07150)
 
-[3] [Hongming Zhang and Tongzheng Ren and Chenjun Xiao and Dale Schuurmans and Bo Dai. "Efficient Reinforcement Learning from Partial Observability." arXiv preprint arXiv:2311.12244 (2024).](https://arxiv.org/abs/2311.12244)
+[3] [Hongming Zhang, Tongzheng Ren, Chenjun Xiao, Dale Schuurmans, and Bo Dai. "Efficient Reinforcement Learning from Partial Observability." arXiv preprint arXiv:2311.12244 (2024).](https://arxiv.org/abs/2311.12244)
 
 If you find our work helpful, please consider citing our paper:
 ```
