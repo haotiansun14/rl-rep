@@ -1,0 +1,78 @@
+# misc
+log_dir: "log"
+seed: 0
+debug: false
+name: "debug"
+
+# env
+task: metaworld_door-open
+frame_stack: 3
+action_repeat: 2
+env_seed: 0
+
+# train
+algo: "latent_diff_sr"
+buffer_type: "numpy"
+buffer_size: 1000000
+batch_size: 256
+buffer_workers: 4
+buffer_snap: false
+nstep: 3
+discount: 0.99
+num_train_frames: 1000000
+warmup_frames: 4000
+ae_pretrain_steps: 5000
+pretrain_steps: 10000
+eval_frames: 10000
+log_frames: 1000
+eval_episodes: 10
+update_freq: 1
+device: null
+save_video: false
+
+# agent
+stddev_schedule: 'linear(1.0,0.1,500000)'
+stddev_clip: 0.3
+reg_coef: 0.0
+kl_coef: 1.0
+ae_coef: 1.0
+repr_coef: 1.0
+tau: 0.01
+extra_repr_step: 1
+critic_loss: "mse"
+num_noises: 1000
+noise_param1: 0.0001
+noise_param2: 0.02
+noise_schedule: "linear"
+feature_dim: 2048
+latent_dim: 256
+ae_num_layers: 4
+ae_num_filters: 32
+bn_dim: 512
+actor_hidden_dim: 1024
+critic_hidden_dim: 1024
+update_every: 2
+psi_hidden_dim: 512
+psi_hidden_depth: 2
+zeta_hidden_dim: 512
+zeta_hidden_depth: 4
+# rd_hidden_dim: 256
+# rd_hidden_depth: 2
+# time_dim: 128
+ae_lr: 0.0003
+score_lr: 0.0003
+actor_lr: 0.0001
+critic_lr: 0.0001
+do_scale: false
+use_repr_target: true
+back_critic_grad: true
+grad_norm: null
+
+# wandb
+wandb:
+  activate: false
+  project: null
+  entity: null
+
+csv: 
+  activate: false

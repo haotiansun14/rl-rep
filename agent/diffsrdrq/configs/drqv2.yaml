@@ -1,0 +1,51 @@
+# misc
+log_dir: "log"
+seed: 0
+debug: false
+name: "debug"
+
+# env
+task: metaworld_door-open
+frame_stack: 3
+action_repeat: 2
+env_seed: 0
+
+# train
+algo: "drqv2"
+buffer_type: "numpy"
+buffer_size: 1000000
+batch_size: 256
+buffer_workers: 4
+buffer_snap: false
+nstep: 3
+discount: 0.99
+num_train_frames: 1000000
+warmup_frames: 4000
+pretrain_steps: 0
+eval_frames: 10000
+log_frames: 1000
+eval_episodes: 10
+update_freq: 1
+device: null
+save_video: false
+
+# agent and networks
+stddev_schedule: 'linear(1.0,0.1,500000)'
+stddev_clip: 0.3
+tau: 0.01
+critic_loss: "mse"
+bn_dim: 50
+actor_hidden_dim: 1024
+critic_hidden_dim: 1024
+update_every: 2
+encoder_lr: 0.0001
+actor_lr: 0.0001
+critic_lr: 0.0001
+
+# logging
+wandb:
+  activate: false
+  project: null
+  entity: null
+csv: 
+  activate: false
