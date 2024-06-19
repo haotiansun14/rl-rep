@@ -1,0 +1,7 @@
+.cache
+.vscode
+**/__pycache__
+log
+ckpts/
+log*/
+shells/
