@@ -24,7 +24,7 @@ Example usage: `python main.py --alg vlsac --env HalfCheetah-v3`.
 
 [2] [Zhang, Tianjun, Tongzheng Ren, Mengjiao Yang, Joseph Gonzalez, Dale Schuurmans, and Bo Dai. "Making linear mdps practical via contrastive representation learning." In International Conference on Machine Learning, pp. 26447-26466. PMLR, 2022.](https://arxiv.org/abs/2207.07150)
 
-[3] [Hongming Zhang, Tongzheng Ren, Chenjun Xiao, Dale Schuurmans, and Bo Dai. "Efficient Reinforcement Learning from Partial Observability." arXiv preprint arXiv:2311.12244 (2024).](https://arxiv.org/abs/2311.12244)
+[3] [Hongming Zhang, Tongzheng Ren, Chenjun Xiao, Dale Schuurmans, and Bo Dai. "Provable Representation with Efficient Planning for Partial Observable Reinforcement Learning." arXiv preprint arXiv:2311.12244 (2024).](https://arxiv.org/abs/2311.12244)
 
 If you find our work helpful, please consider citing our paper:
 ```
