@@ -48,8 +48,8 @@ If you find our work helpful, please consider citing our paper:
 }
 ```
 ```
-@misc{zhang2024efficient,
-      title={Efficient Reinforcement Learning from Partial Observability}, 
+@misc{zhang2024provable,
+      title={Provable Representation with Efficient Planning for Partially Observable Reinforcement Learning},
       author={Hongming Zhang and Tongzheng Ren and Chenjun Xiao and Dale Schuurmans and Bo Dai},
       year={2024},
       eprint={2311.12244},
