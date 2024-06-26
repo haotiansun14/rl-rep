@@ -10,15 +10,18 @@ from utils import util, buffer
 from agent.sac import sac_agent
 from agent.vlsac import vlsac_agent
 from agent.ctrlsac import ctrlsac_agent
+from agent.diffsrsac import diffsrsac_agent
+
+
 
 EPS_GREEDY = 0.01
 
 if __name__ == "__main__":
-	
+
   parser = argparse.ArgumentParser()
   parser.add_argument("--dir", default=0, type=int)                     
-  parser.add_argument("--alg", default="ctrlsac")                     # Alg name (sac, vlsac, spedersac, ctrlsac, mulvdrq)
-  parser.add_argument("--env", default="HalfCheetah-v3")          # Environment name
+  parser.add_argument("--alg", default="diffsrsac")                     # Alg name (sac, vlsac, spedersac, ctrlsac, mulvdrq, diffsrsac)
+  parser.add_argument("--env", default="HalfCheetah-v4")          # Environment name
   parser.add_argument("--seed", default=0, type=int)              # Sets Gym, PyTorch and Numpy seeds
   parser.add_argument("--start_timesteps", default=25e3, type=float)# Time steps initial random policy is used
   parser.add_argument("--eval_freq", default=5e3, type=int)       # How often (time steps) we evaluate
@@ -86,6 +89,9 @@ if __name__ == "__main__":
     kwargs['feature_dim'] = 2048  
     kwargs['hidden_dim'] = 1024
     agent = ctrlsac_agent.CTRLSACAgent(**kwargs)
+  elif args.alg == 'diffsrsac':
+    agent = diffsrsac_agent.DIFFSRSACAgent(**kwargs)
+
   
   replay_buffer = buffer.ReplayBuffer(state_dim, action_dim)
 
