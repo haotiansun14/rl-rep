@@ -175,29 +175,6 @@ class DIFFSRSACAgent(SACAgent):
                                                       lr=phi_and_nabla_mu_lr,
                                                       betas=[0.9, 0.999])
 
-        self.steps = 0
-
-        self.action_range = [
-            float(action_space.low.min()),
-            float(action_space.high.max())
-        ]
-        self.discount = discount
-        self.tau = tau
-        self.target_update_period = target_update_period
-        self.learnable_temperature = auto_entropy_tuning
-
-        # functions
-
-        self.log_alpha = torch.tensor(np.log(alpha)).to(device)
-        self.log_alpha.requires_grad = True
-        self.target_entropy = -action_dim
-
-        # optimizers
-
-        self.critic_optimizer = torch.optim.Adam(self.critic.parameters(),
-                                                 lr=critic_and_actor_lr,
-                                                 betas=[0.9, 0.999])
-
     @staticmethod
     def generate_alphabars_and_alphas(a, b, num_alphas):
 
