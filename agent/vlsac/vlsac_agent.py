@@ -5,7 +5,7 @@ import torch.nn.functional as F
 from torch.distributions import Normal 
 import os
 
-from utils.util import unpack_batch, RunningMeanStd
+from utils.util import unpack_batch
 from networks.policy import GaussianPolicy
 from networks.vae import Encoder, Decoder, GaussianFeature
 from agent.sac.sac_agent import SACAgent
