@@ -11,6 +11,7 @@ from agent.sac import sac_agent
 from agent.vlsac import vlsac_agent
 from agent.ctrlsac import ctrlsac_agent
 from agent.diffsrsac import diffsrsac_agent
+from agent.spedersac import spedersac_agent
 
 
 
@@ -20,7 +21,7 @@ if __name__ == "__main__":
 
   parser = argparse.ArgumentParser()
   parser.add_argument("--dir", default=0, type=int)                     
-  parser.add_argument("--alg", default="diffsrsac")                     # Alg name (sac, vlsac, spedersac, ctrlsac, mulvdrq, diffsrsac)
+  parser.add_argument("--alg", default="diffsrsac")                     # Alg name (sac, vlsac, spedersac, ctrlsac, mulvdrq, diffsrsac, spedersac)
   parser.add_argument("--env", default="HalfCheetah-v4")          # Environment name
   parser.add_argument("--seed", default=0, type=int)              # Sets Gym, PyTorch and Numpy seeds
   parser.add_argument("--start_timesteps", default=25e3, type=float)# Time steps initial random policy is used
@@ -91,7 +92,16 @@ if __name__ == "__main__":
     agent = ctrlsac_agent.CTRLSACAgent(**kwargs)
   elif args.alg == 'diffsrsac':
     agent = diffsrsac_agent.DIFFSRSACAgent(**kwargs)
-
+  elif args.alg == 'spedersac':
+    kwargs['extra_feature_steps'] = 5
+    kwargs['phi_and_mu_lr'] = 0.00001
+    kwargs['phi_hidden_dim'] = 512
+    kwargs['phi_hidden_depth'] = 1
+    kwargs['mu_hidden_dim'] = 512
+    kwargs['mu_hidden_depth'] = 0
+    kwargs['critic_and_actor_lr'] = 0.0003
+    kwargs['critic_and_actor_hidden_dim'] = 256
+    agent = spedersac_agent.SPEDERSACAgent(**kwargs)
   
   replay_buffer = buffer.ReplayBuffer(state_dim, action_dim)
 
