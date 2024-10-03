@@ -194,7 +194,7 @@ class SPEDERSACAgent(SACAgent):
         assert z_phi.shape[-1] == self.feature_dim
         assert z_mu_next.shape[-1] == self.feature_dim
 
-        model_loss_pt1 = -2 * z_phi @ z_mu_next.T  # check if need to sum
+        model_loss_pt1 = -2 * torch.diag(z_phi @ z_mu_next.T)  # check if need to sum
 
         model_loss_pt2_a = z_phi_random @ z_mu_next_random.T
         model_loss_pt2 = model_loss_pt2_a @ model_loss_pt2_a.T
