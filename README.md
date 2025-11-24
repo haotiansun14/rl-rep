@@ -1,4 +1,6 @@
-# Overview
+# **Note:** For an actively maintained and up-to-date implementation of spectral representation–based RL algorithms, please refer to our new library: [spectral-rl](https://github.com/spectral-rl/spectral-rl).
+
+## Overview
 This repo is dedicated to exploring the field of Representation Learning (RepL) with a specific focus on Reinforcement Learning (RL) and Causal Inference. Our goal is to build a comprehensive resource that integrates our latest research and practical implementations.
 
 [Website] [RL-REP: Representation-based Reinforcement Learning](https://haotiansun14.github.io/rl-rep-page/)
@@ -12,17 +14,17 @@ This repo contains implementations for RL with:
 - Spectral Decomposition Representation (SPEDER), as described in [5].
 
 
-### Directory
+## Directory
 - `agent` hosts implementation files for various agents, including the Soft Actor-Critic baseline (`sac`), SAC with Latent Variable (`vlsac`), SAC with Contrastive Representations (`ctrlsac`), and DrQv2 with Multi-step Latent Variable Representation (`mulvdrq`), SAC with Diff-SR (`diffsrsac`), SAC with SPEDER (`spedersac`).
 - `networks` contains base implementations for critics, policy networks, variational autoencoders (VAE), and more.
 - `utils` comprises replay buffers and several auxiliary functions.
 
-### Run
+## Run
 Execute the `main.py` script with your preferred arguments, such as `--alg` for algorithm type, `--env` for environment, and so on.
 
 Example usage: `python main.py --alg vlsac --env HalfCheetah-v3`.
 
-### References
+## References
 [1] [Ren, Tongzheng, Chenjun Xiao, Tianjun Zhang, Na Li, Zhaoran Wang, Sujay Sanghavi, Dale Schuurmans, and Bo Dai. "Latent variable representation for reinforcement learning." arXiv preprint arXiv:2212.08765 (2022).](https://arxiv.org/abs/2212.08765)
 
 [2] [Zhang, Tianjun, Tongzheng Ren, Mengjiao Yang, Joseph Gonzalez, Dale Schuurmans, and Bo Dai. "Making linear mdps practical via contrastive representation learning." In International Conference on Machine Learning, pp. 26447-26466. PMLR, 2022.](https://arxiv.org/abs/2207.07150)
