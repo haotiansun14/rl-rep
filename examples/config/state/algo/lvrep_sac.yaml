@@ -1,0 +1,26 @@
+cls: lvrep_sac
+discount: 0.99
+tau: 0.005
+alpha: 0.2
+auto_entropy: true
+
+target_update_freq: 2
+
+critic_hidden_dims: [256, 256] # this is actually not used. this is only for compatibility
+actor_hidden_dims: [256, 256]
+
+critic_lr: 0.0003 # tune
+actor_lr: 0.0003 # tune
+alpha_lr: 0.0003 # tune
+
+# below are params specific to lvrep_sac
+feature_dim: 256
+feature_tau: 0.001
+use_feature_target: true
+feature_update_ratio: 4
+encoder_hidden_dims: [256, 256]
+decoder_hidden_dims: [256, ]
+f_hidden_dims: [256, 256]
+feature_lr: 0.0003
+critic_hidden_dim: 256
+num_noise: 20

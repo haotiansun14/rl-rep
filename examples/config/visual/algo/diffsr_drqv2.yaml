@@ -1,0 +1,49 @@
+cls: diffsr_drqv2
+pretrain_steps: 10000
+stddev_schedule: 'linear(1.0,0.1,500000)'
+stddev_clip: 0.3
+tau: 0.01
+critic_loss_type: mse
+update_every: 2
+
+ae_pretrain_steps: 5000
+reg_coef: 0.0
+kl_coef: 0.1
+recon_coef: 1.0
+diffusion_coef: 1.0
+critic_coef: 1.0
+
+factorized: true
+x_min: -7.
+x_max: 7.
+sample_steps: 50
+beta_min: 0.0001
+beta_max: 0.02
+s: 0.008
+noise_schedule: vp
+
+feature_dim: 1024
+latent_dim: 256
+ae_num_layers: 4
+ae_num_filters: 32
+embed_dim: 256
+actor_hidden_dim: 1024
+critic_hidden_dim: 1024
+psi_hidden_dim: 512
+psi_hidden_depth: 2
+zeta_hidden_dim: 512
+zeta_hidden_depth: 4
+score_dropout: null
+label_dropout: null
+extra_repr_step: 1
+
+ae_lr: 0.0001
+diffusion_lr: 0.0001
+actor_lr: 0.0001
+critic_lr: 0.0001
+do_scale: false
+use_repr_target: true
+back_critic_grad: true
+grad_norm: null
+
+frame_stack: ${frame_stack}

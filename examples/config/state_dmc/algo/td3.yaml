@@ -1,0 +1,17 @@
+cls: td3
+discount: 0.99
+
+tau: 0.005
+actor_update_freq: 1
+target_update_freq: 1
+
+critic_hidden_dims: [512, 512, 512]
+actor_hidden_dims: [512, 512, 512]
+
+critic_lr: 0.0003
+actor_lr: 0.0003
+
+target_policy_noise: 0.2
+noise_clip: 0.3
+exploration_noise: 0.2
+normalize_obs: false

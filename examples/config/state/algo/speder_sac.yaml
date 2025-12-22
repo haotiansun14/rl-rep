@@ -1,0 +1,24 @@
+cls: speder_sac
+discount: 0.99
+tau: 0.005
+alpha: 0.2
+auto_entropy: true
+
+target_update_freq: 2 # tune
+
+critic_hidden_dims: [256, 256] # this is actually not used. this is only for compatibility
+actor_hidden_dims: [256, 256]
+
+critic_lr: 0.0003
+actor_lr: 0.0003
+alpha_lr: 0.0003
+
+# below are params specific to ctrl_sac
+temperature: null
+feature_dim: 2048
+feature_lr: 0.00001 # tune
+phi_hidden_dims: [512]
+mu_hidden_dims: []
+reward_coef: 0.5
+feature_update_ratio: 6 # tune
+critic_hidden_dim: 256

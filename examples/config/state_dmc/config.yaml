@@ -1,0 +1,27 @@
+defaults:
+  - algo: sac
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+
+# experiment
+log_dir: "log"
+seed: 0
+debug: false
+name: debug
+device: null
+
+# env
+task: hopper-hop
+frame_skip: 2
+
+# train
+algo: ???
+buffer_size: 1000000
+batch_size: 512
+
+train_frames: 1000000
+warmup_frames: 10000
+random_frames: 10000
+eval_frames: 10000
+eval_episodes: 10
+log_frames: 1000

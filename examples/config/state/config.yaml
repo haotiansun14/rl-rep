@@ -1,0 +1,26 @@
+defaults:
+  - algo: sac
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+
+# experiment
+log_dir: "log"
+seed: 0
+debug: false
+name: debug
+device: null
+
+# env
+task: HalfCheetah-v3
+
+# train
+algo: ???
+buffer_size: 1000000
+batch_size: 256
+
+train_steps: 3000000
+warmup_steps: 2000
+random_steps: 5000
+eval_interval: 10000
+eval_episodes: 10
+log_interval: 10000

@@ -1,0 +1,16 @@
+cls: mulvrep_drqv2
+pretrain_steps: 0
+stddev_schedule: 'linear(1.0,0.1,500000)'
+stddev_clip: 0.3
+tau: 0.01
+critic_loss_type: huber
+encoder_lr: 0.0001
+lr: 0.0001
+update_every: 2
+
+embed_dim: 100
+feature_dim: 100
+hidden_dim: 1024
+
+repr_coef: 0.5
+kl_coef: 1.0

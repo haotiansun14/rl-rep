@@ -1,0 +1,32 @@
+defaults:
+  - algo: drqv2
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+
+# experiment
+log_dir: "log"
+seed: 0
+debug: false
+name: debug
+device: null
+save_video: false
+
+# env
+task: metaworld_door-open
+frame_stack: 3
+action_repeat: 2
+env_seed: 0
+nstep: 3
+discount: 0.99
+
+# train
+algo: ???
+buffer_size: 1000000
+batch_size: 256
+train_frames: 1000000
+random_frames: 4000
+pretrain_steps: ${algo.pretrain_steps}
+eval_frames: 10000
+log_frames: 1000
+utd: 1
+eval_episode: 10

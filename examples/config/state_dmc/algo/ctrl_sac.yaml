@@ -1,0 +1,27 @@
+cls: ctrl_sac
+discount: 0.99
+tau: 0.005
+alpha: 0.2
+auto_entropy: true
+
+target_update_freq: 2 # tune
+
+critic_hidden_dims: [1024, 1024] # this is actually not used. this is only for compatibility
+actor_hidden_dims: [1024, 1024]
+
+critic_lr: 0.0001
+actor_lr: 0.0001
+alpha_lr: 0.0001
+
+# below are params specific to ctrl_sac
+feature_dim: 1024
+feature_lr: 0.0001 # tune
+phi_hidden_dims: [1024, 1024]
+mu_hidden_dims: [1024, 1024]
+theta_hidden_dims: [1024, ] # this is for rff feature
+reward_coef: 1.0
+feature_update_ratio: 1 # tune
+temperature: 0.2
+critic_hidden_dim: 1024
+back_critic_grad: false
+critic_coef: 1.0

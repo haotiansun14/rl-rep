@@ -1,0 +1,13 @@
+cls: drqv2
+pretrain_steps: 0
+stddev_schedule: 'linear(1.0,0.1,500000)'
+stddev_clip: 0.3
+tau: 0.01
+critic_loss_type: mse
+embed_dim: 50
+actor_hidden_dim: 1024
+critic_hidden_dim: 1024
+encoder_lr: 0.0001
+actor_lr: 0.0001
+critic_lr: 0.0001
+update_every: 2

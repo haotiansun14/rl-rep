@@ -1,0 +1,14 @@
+cls: sac
+discount: 0.99
+tau: 0.005
+alpha: 0.2
+auto_entropy: true
+
+target_update_freq: 1
+
+critic_hidden_dims: [256, 256]
+actor_hidden_dims: [256, 256]
+
+critic_lr: 0.0003
+actor_lr: 0.0003
+alpha_lr: 0.0003

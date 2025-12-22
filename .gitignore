@@ -1,3 +1,9 @@
 **/__pycache__
+**/.vscode
 log/
 .idea/
+**/*.ipynb
+out/
+wandb/
+ckpts/
+outputs/
